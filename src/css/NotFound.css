@@ -1,0 +1,17 @@
+.not-found {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  justify-content: space-evenly;
+  color: black;
+}
+
+
+
+a {
+    color: #1a1a1a;
+}
+

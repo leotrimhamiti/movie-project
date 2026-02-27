@@ -1,0 +1,66 @@
+.log-in-content {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.log-in-content h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+  color: black;
+}
+
+.log-in-content p {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.sign-up-p {
+    margin-top: 10px;
+    align-self: center;
+    color: black;
+}
+
+.log-in-content {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: space-between;
+}
+
+.log-in-content button {
+    margin-top: 15px;
+    background-color: #000000;
+    color: white;
+    padding: 4px 20px;
+    height: 40px;
+    width: 300px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.log-in-content input {
+    height: 40px;
+    width: 300px;
+    padding: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sign-up-content > * {
+  animation: fadeIn 0.3s ease-out forwards;
+}
