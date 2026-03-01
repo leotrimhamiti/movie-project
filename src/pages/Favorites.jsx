@@ -1,6 +1,6 @@
 import "../css/Favorites.css";
-import { useMovieContext } from "../contexts/MovieContext";
-import MovieCard from "../components/MovieCard";
+import { useMovieContext } from "../contexts/MovieContext.jsx";
+import MovieCard from "../components/MovieCard.jsx";
 import { useAuth } from "../contexts/AuthContext.jsx";
 import { Link } from "react-router-dom";
 
@@ -26,7 +26,7 @@ function Favorites() {
     );
   }
 
-  // 🎬 Show favorite movies
+  
   return (
     <div className="favorites">
       <h2>Your Favorite Movies</h2>
