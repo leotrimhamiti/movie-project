@@ -62,5 +62,62 @@ color: white;}
   
 }
 
+ .burger-menu {
+    display: none;
+    width: 30px;
+  }
+
+@media (max-width: 639px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+ 
+}
+
+ .navbar-links-burger {
+    display: none;
+  }
+
+.navbar-links-burger.open {
+  top: 68px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: black;
+ 
+}
+
+.navbar-links-burger .profile-picture-logout {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  
+}
+
+
+@media (min-width: 635px) {
+  .navbar-links-burger.open {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 
