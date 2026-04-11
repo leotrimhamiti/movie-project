@@ -1,15 +1,25 @@
 import '../css/MovieCard.css'
 import { useMovieContext } from '../contexts/MovieContext';
+import { useAuth } from '../contexts/AuthContext';
 
 function MovieCard({ movie }) {
     
     const { isFavorite, addToFavs, removeFromFavs } = useMovieContext();
     
+    const {user} = useAuth();
     
+
     const favorite = isFavorite(movie.id);
 
     function onFavoriteClick(e) {
         e.preventDefault();
+
+        
+
+        if(!user) {
+            alert("You need to log in to add favorite movies")
+            return;
+        }
 
         if (favorite) {
             removeFromFavs(movie.id);
