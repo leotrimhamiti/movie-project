@@ -13,8 +13,36 @@ import SignUp from './pages/SignUp.jsx';
 import Login from './pages/Login.jsx';
 import Footer from './components/Footer.jsx';
 import { AuthProvider } from './contexts/AuthContext';
+import { useAuth } from './contexts/AuthContext';
 
 function App() {
+
+  const {user} = useAuth();
+
+  if(user) {
+    return(
+    <AuthProvider>
+      <MovieProvider>
+        <div className="app">
+          <Navbar />
+
+          <main className="content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/favourites" element={<Favorites />} />
+              <Route path="/login" element={<Home/>} />
+              <Route path="/signup" element={<Home/>} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </main>
+
+          <Footer />
+        </div>
+      </MovieProvider>
+    </AuthProvider>
+  )}
+
   return (
     <AuthProvider>
       <MovieProvider>

@@ -11,7 +11,7 @@
 .footer p {
     color: #888;
     font-size: 0.9rem;
-    margin-top: 10px;
+    
 }
 
 .footer-links {
@@ -31,4 +31,13 @@
 
 .footer-link:hover {
     color: #999;
+}
+
+
+.footer-logged-in {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
 }
