@@ -45,9 +45,12 @@
 }
 
 .log-in-content input {
-    height: 40px;
+   height: 40px;
     width: 300px;
     padding: 10px;
+    background-color: white;
+    border: solid 1px gray;
+    border-radius: 4px;
 }
 
 @keyframes fadeIn {
