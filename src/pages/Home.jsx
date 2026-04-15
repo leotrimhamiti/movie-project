@@ -12,15 +12,12 @@ function Home() {
   const [genresBtn, setGenresBtn] = useState(null);
 
   const changeBtn = (genre) => {
-    setGenresBtn(genre);
-    
-  }
+    setGenresBtn(genre);}
 
   const loadGenre = async (genreId) => {
   const movies = await getMoviesByGenre(genreId);
   setMovies(movies);
-  setSearchQuery("");
-};
+  setSearchQuery("");};
 
   useEffect(() => {
     const loadPopularMovies = async () => {
