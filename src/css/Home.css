@@ -93,3 +93,7 @@
   background: black;
   color: white;
 }
+
+.empty-state h2, p {
+color: black;
+}

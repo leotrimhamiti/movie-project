@@ -13,11 +13,13 @@ function Home() {
 
   const changeBtn = (genre) => {
     setGenresBtn(genre);
+    
   }
 
   const loadGenre = async (genreId) => {
   const movies = await getMoviesByGenre(genreId);
   setMovies(movies);
+  setSearchQuery("");
 };
 
   useEffect(() => {
@@ -38,9 +40,11 @@ function Home() {
 
   const handleSearch = async (e) => {
     e.preventDefault();
-
+    changeBtn("");
     if(!searchQuery.trim()) return
     setLoading(true)
+
+    
 
     try {
         const searchResults = await searchMovies(searchQuery)
@@ -143,15 +147,23 @@ function Home() {
 
         {error && <div className="error-message">{error}</div>}
 
-      {loading ? (
-        <div className="loading">Loading...</div>
+     {loading ? (
+    <div className="loading">Loading...</div>
+     ) : (
+    <div className="movies-grid">
+      {movies.length > 0 ? (
+        movies.map((movie) => (
+          <MovieCard movie={movie} key={movie.id} />
+        ))
       ) : (
-        <div className="movies-grid">
-          {movies.map((movie) => (
-            <MovieCard movie={movie} key={movie.id} />
-          ))}
+        /* This is your Empty State */
+        <div className="empty-state">
+          <h2>No Movies Found</h2>
+          <p>We couldn't find what you're looking for. Try a different search!</p>
         </div>
       )}
+    </div>
+  )}
     </div>
   );
 }
