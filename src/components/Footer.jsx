@@ -10,7 +10,7 @@ function Footer() {
    return (
     <div className="footer">
         <div className="footer-links">
-            {/* Wrap these in a fragment <> </> */}
+            
             {!user && (
                 <>
                     <Link to='/' className="footer-link">Home</Link>
@@ -20,7 +20,7 @@ function Footer() {
                 </>
             )}
             
-            {/* Example: What to show if the user IS logged in */}
+           
             {user && (
                 <> <div className='footer-logged-in'>
                     <Link to='/' className="footer-link">Home</Link>
